@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ayman Skhairi | Data & Supply Chain Portfolio</title>
+<meta content="Professional portfolio of Ayman Skhairi focused on data analysis, supply chain operations, inventory optimization, and AI-driven automation." name="description"/>
+<style>
+    :root{
+      --bg:#0d1117;
+      --bg-soft:#121826;
+      --surface:rgba(255,255,255,.08);
+      --surface-2:rgba(255,255,255,.05);
+      --line:rgba(255,255,255,.12);
+      --text:#eef2f7;
+      --muted:#b5c0cf;
+      --gold:#d4af6d;
+      --gold-2:#f0d8a0;
+      --blue:#8eb8ff;
+      --shadow:0 30px 80px rgba(0,0,0,.35);
+      --radius-xl:32px;
+      --radius-lg:24px;
+      --radius-md:18px;
+      --max:1240px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(142,184,255,.12), transparent 24%),
+        radial-gradient(circle at 90% 20%, rgba(212,175,109,.12), transparent 20%),
+        radial-gradient(circle at 60% 80%, rgba(255,255,255,.05), transparent 16%),
+        linear-gradient(180deg, #0b0f14 0%, #0f1520 38%, #111827 100%);
+      overflow-x:hidden;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size:40px 40px;
+      mask-image:linear-gradient(180deg, rgba(0,0,0,.35), transparent 85%);
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button{font:inherit}
+    .container{width:min(var(--max), calc(100% - 32px));margin:0 auto}
+    .glass{
+      background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
+      backdrop-filter:blur(22px);
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .glass::after{
+      content:"";
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(135deg, rgba(255,255,255,.14), transparent 26%, rgba(212,175,109,.08) 72%, transparent 100%);
+    }
+    .nav{
+      position:sticky;top:0;z-index:100;
+      backdrop-filter:blur(18px);
+      background:rgba(10,13,19,.65);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner{
+      min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand-mark{
+      width:50px;height:50px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;
+      border:2px solid rgba(255,255,255,.2);box-shadow:0 0 10px rgba(212,175,109,.4);
+    }
+    .brand-mark img{width:100%;height:100%;object-fit:cover}
+    .brand-copy strong{
+      display:block;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);
+    }
+    .brand-copy span{display:block;color:var(--muted);font-size:.95rem;margin-top:2px}
+    .nav-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+    .nav-links a{
+      padding:11px 15px;border-radius:999px;color:#dce5f3;transition:.25s ease;font-size:.95rem;
+    }
+    .nav-links a:hover{transform:translateY(-2px);background:rgba(255,255,255,.08)}
+    .hero{padding:38px 0 16px}
+    .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:24px;align-items:stretch}
+    .hero-copy{border-radius:var(--radius-xl);padding:48px}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;
+      background:rgba(212,175,109,.12);color:var(--gold-2);font-size:.78rem;letter-spacing:.15em;
+      text-transform:uppercase;font-weight:700;margin-bottom:22px;
+    }
+    .eyebrow::before{
+      content:"";width:10px;height:10px;border-radius:999px;
+      background:linear-gradient(135deg,var(--gold),var(--gold-2));
+      box-shadow:0 0 0 5px rgba(212,175,109,.14);
+    }
+    h1,h2,h3,h4{margin:0;line-height:1.03}
+    h1{
+      font-family:Georgia,"Times New Roman",serif;font-size:clamp(3rem,5.5vw,5.8rem);
+      letter-spacing:-.05em;margin-bottom:16px;max-width:10ch;
+    }
+    .gradient{
+      background:linear-gradient(90deg,#ffffff 0%, #b8c7da 36%, #f0d8a0 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .hero-copy > p{font-size:1.08rem;color:#cad4e2;max-width:62ch;margin:0 0 26px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+    .btn{
+      min-height:54px;padding:0 20px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;
+      gap:10px;border:1px solid transparent;font-weight:700;cursor:pointer;transition:.25s ease;
+    }
+    .btn:hover{transform:translateY(-3px)}
+    .btn-primary{
+      color:#10141c;background:linear-gradient(135deg,var(--gold-2),var(--gold));
+      box-shadow:0 18px 40px rgba(212,175,109,.22);
+    }
+    .btn-secondary{color:#eef2f7;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
+    .btn-secondary:hover{background:rgba(255,255,255,.1)}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .metric{
+      border-radius:22px;padding:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);
+    }
+    .metric small{
+      display:block;color:#f0d8a0;margin-bottom:8px;font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;
+    }
+    .metric strong{font-size:1rem}
+    .hero-visual{border-radius:var(--radius-xl);padding:18px;display:flex;flex-direction:column;gap:18px}
+    .portrait{
+      min-height:590px;border-radius:28px;overflow:hidden;position:relative;border:1px solid rgba(255,255,255,.14);
+      background:linear-gradient(180deg, rgba(15,20,28,.05), rgba(15,20,28,.28)), url('Ayman Skhairi(1).png') center top/cover no-repeat;
+    }
+    .portrait::before{
+      content:"";position:absolute;inset:auto 0 0 0;height:46%;background:linear-gradient(180deg, transparent, rgba(10,13,19,.68));
+    }
+    .portrait::after{
+      content:"Data-Driven · Analytical · Operations Focused";
+      position:absolute;left:18px;bottom:18px;padding:10px 14px;border-radius:999px;font-size:.76rem;
+      letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.88);color:#10141c;border:1px solid rgba(255,255,255,.25);
+    }
+    section{padding:18px 0 30px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:22px}
+    .section-head h2{
+      font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,3vw,3rem);letter-spacing:-.05em;margin-bottom:8px;
+    }
+    .section-head p{margin:0;color:var(--muted);max-width:72ch}
+    .about-grid,.experience-grid,.qual-grid,.docs-grid,.contact-grid{
+      display:grid;gap:22px;
+    }
+    .about-grid{grid-template-columns:1.04fr .96fr}
+    .experience-grid{grid-template-columns:repeat(2,1fr)}
+    .qual-grid{grid-template-columns:repeat(3,1fr)}
+    .docs-grid{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:1.08fr .92fr}
+    .panel{border-radius:var(--radius-xl);padding:32px}
+    .lead{font-size:1.06rem;color:#d3dcea}
+    .feature-list{display:grid;gap:14px;margin-top:22px}
+    .feature{
+      display:flex;gap:14px;padding:18px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+    }
+    .feature-dot{
+      width:12px;height:12px;flex:0 0 12px;margin-top:8px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--gold-2));
+    }
+    .quote-box{
+      border-radius:var(--radius-xl);padding:34px;min-height:100%;background:linear-gradient(135deg,#121b2a 0%, #1b2638 100%);
+      color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow);
+    }
+    .quote-box::before{
+      content:"";position:absolute;inset:auto -40px -40px auto;width:180px;height:180px;border-radius:50%;
+      background:radial-gradient(circle, rgba(212,175,109,.26), transparent 70%);
+    }
+    .quote{
+      font-family:Georgia,"Times New Roman",serif;font-size:1.42rem;line-height:1.45;margin-bottom:18px;
+    }
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .tag{
+      padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);color:#f1ead9;font-size:.9rem;
+    }
+    .timeline{display:grid;gap:14px}
+    .item{
+      padding:22px;border-radius:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:.25s ease;
+    }
+    .item:hover,.qual-card:hover,.doc-card:hover{transform:translateY(-4px)}
+    .item time{
+      display:inline-block;margin-bottom:10px;color:var(--gold-2);text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;font-weight:700;
+    }
+    .item h3{font-size:1.12rem;margin-bottom:8px}
+    .item p{margin:0;color:var(--muted)}
+    .qual-card,.doc-card{border-radius:28px;padding:30px;transition:.25s ease}
+    .qual-card small,.doc-card small{
+      display:block;color:var(--gold-2);text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px;font-size:.76rem;
+    }
+    .qual-card strong{display:block;font-size:1.08rem;margin-bottom:10px}
+    .qual-card p,.doc-card p{margin:0;color:var(--muted)}
+    .doc-card h3{
+      font-family:Georgia,"Times New Roman",serif;font-size:1.55rem;margin-bottom:8px;
+    }
+    .doc-card p{margin:0 0 18px}
+    .preview{
+      position:relative;min-height:380px;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(235,240,247,.98));
+    }
+    .preview iframe{
+      width:100%;height:380px;border:0;display:block;background:#fff;pointer-events:none;
+    }
+    .preview-badge{
+      position:absolute;right:14px;bottom:14px;padding:8px 12px;border-radius:999px;background:rgba(16,20,28,.88);
+      color:#fff;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;
+    }
+    .doc-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .contact-panel,.contact-side{border-radius:34px;padding:34px}
+    .contact-panel h2{
+      font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,3vw,3.3rem);letter-spacing:-.05em;margin-bottom:12px;
+    }
+    .contact-panel p,.contact-side p{margin:0 0 18px;color:var(--muted)}
+    .contact-list{display:grid;gap:12px;margin-top:18px}
+    .contact-list a,.contact-list div{
+      padding:15px 18px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:#e7edf7;
+    }
+    footer{padding:46px 0 60px;text-align:center;color:#95a4b8;font-size:.95rem}
+    .modal{
+      position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(5,8,13,.74);
+      backdrop-filter:blur(18px);z-index:200;
+    }
+    .modal.open{display:flex}
+    .modal-card{
+      width:min(1180px,100%);height:min(90vh,920px);border-radius:30px;overflow:hidden;background:#fff;
+      box-shadow:0 40px 100px rgba(0,0,0,.45);display:grid;grid-template-rows:auto 1fr;
+    }
+    .modal-head{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;border-bottom:1px solid rgba(31,36,48,.08);
+      background:linear-gradient(135deg,#f8f3eb 0%,#f3ecdf 100%);
+    }
+    .modal-head h3{
+      font-family:Georgia,"Times New Roman",serif;font-size:1.3rem;color:#111722;
+    }
+    .modal-close{
+      width:46px;height:46px;border-radius:14px;border:0;background:#202630;color:#fff;cursor:pointer;font-size:1.25rem;
+    }
+    .modal iframe{width:100%;height:100%;border:0;background:#fff}
+    .fade-up{opacity:0;transform:translateY(24px);transition:opacity .75s ease, transform .75s ease}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
+    @media (max-width:1100px){
+      .hero-grid,.about-grid,.experience-grid,.qual-grid,.docs-grid,.contact-grid,.metrics{
+        grid-template-columns:1fr;
+      }
+      h1{max-width:none}
+    }
+    @media (max-width:760px){
+      .container{width:min(var(--max), calc(100% - 22px))}
+      .nav-inner{flex-direction:column;align-items:flex-start;padding:14px 0}
+      .hero-copy,.hero-visual,.panel,.quote-box,.contact-panel,.contact-side,.doc-card,.qual-card{padding:22px}
+      .portrait{min-height:400px}
+      .preview,.preview iframe{min-height:300px;height:300px}
+      .modal{padding:12px}
+      .modal-card{height:min(92vh,920px)}
+    }
+  
+    .lang-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+    .lang-card{
+      border-radius:24px;
+      padding:22px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      transition:.25s ease;
+    }
+    .lang-card:hover{transform:translateY(-4px)}
+    .lang-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:14px;
+    }
+    .lang-name{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+      font-size:1.02rem;
+      color:#eef2f7;
+    }
+    .flag {
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid rgba(255,255,255,0.2);
+  box-shadow:0 6px 14px rgba(0,0,0,0.2);
+}
+    .lang-level{
+      color:var(--gold-2);
+      font-size:.84rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-weight:700;
+      white-space:nowrap;
+    }
+    .lang-bar{
+      width:100%;
+      height:10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .lang-fill{
+      height:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--gold-2),var(--gold));
+      box-shadow:0 0 18px rgba(212,175,109,.22);
+    }
+    .lang-note{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:.94rem;
+    }
+    @media (max-width:900px){
+      .lang-grid{grid-template-columns:1fr}
+    }
+
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+      <a href="https://www.linkedin.com/in/ayman-skhairi-785254289/" target="_blank" class="brand-mark">
+<img src="Ayman Skhairi(1).png" alt="Ayman Skhairi"/>
+</a>
+      <div class="brand-copy">
+        <strong>Data &amp; AI Portfolio</strong>
+        <span>Supply Chain · Operations · Analytics</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#about">Profile</a>
+      <a href="#experience">Projects</a>
+      <a href="#qualifications">Strengths</a>
+      <a href="#languages-certifications">Languages</a>
+<a href="#languages">Languages</a>
+<a href="#documents">Documents</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy glass fade-up">
+      <span class="eyebrow">Professional Portfolio</span>
+      <h1><span class="gradient">Ayman Skhairi</span></h1>
+      <p>
+        Data Analyst and Supply Chain-oriented candidate focused on building practical, data-driven solutions for operations,
+        inventory optimization, and intelligent automation. This portfolio highlights real experience, technical development,
+        and a strong commitment to continuous improvement.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#documents">View Documents</a>
+        <button class="btn btn-secondary open-modal" data-file="Ayman Skhairi En pro(2).pdf" data-title="Ayman Skhairi — CV">Open CV</button>
+        <button class="btn btn-secondary open-modal" data-file="Letter of motivation Ayman.pdf" data-title="Ayman Skhairi — Motivation Letter">Open Motivation Letter</button>
+      </div>
+      <div class="metrics">
+        <div class="metric">
+          <small>Location</small>
+          <strong>El Jadida, Morocco</strong>
+        </div>
+        <div class="metric">
+          <small>Focus</small>
+          <strong>Data &amp; Operations</strong>
+        </div>
+        <div class="metric">
+          <small>Positioning</small>
+          <strong>Analytical &amp; Automation Focused</strong>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual glass fade-up">
+      <div class="portrait"></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div>
+        <h2>Profile</h2>
+        <p>
+          A focused and structured professional profile built around business education, industrial exposure, and a growing specialization in analytics and supply chain operations.
+        </p>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div class="panel glass fade-up">
+        <p class="lead">
+          <strong>Ayman Skhairi</strong> is a motivated and organized professional with a strong academic foundation and hands-on exposure to industrial operations. He is developing practical expertise in data analysis, inventory optimization, supply chain processes, and AI-enabled workflow improvement.
+        </p>
+        <div class="feature-list">
+          <div class="feature">
+            <div class="feature-dot"></div>
+            <div>
+              <strong>Analytical Mindset</strong><br/>
+              Applies structured thinking to operational challenges and seeks measurable, data-backed improvements.
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-dot"></div>
+            <div>
+              <strong>Project-Based Development</strong><br/>
+              Builds capability through concrete projects in Excel, inventory analysis, and automation workflows.
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-dot"></div>
+            <div>
+              <strong>International Readiness</strong><br/>
+              Brings multilingual communication, adaptability, and a professional presentation suited for global work environments.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quote-box fade-up">
+        <div class="quote">
+          “I am committed to developing and applying data-driven solutions that address complex operational challenges.”
+        </div>
+        <p>
+          My objective is to refine technical and analytical capabilities while contributing to impactful, results-oriented initiatives in operations, analytics, and supply chain environments.
+        </p>
+        <div class="tags">
+          <span class="tag">Supply Chain</span>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">Automation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div>
+        <h2>Projects &amp; Experience</h2>
+        <p>
+          A combination of hands-on industrial experience and self-driven technical projects that support a transition into data, supply chain, and operations-focused roles.
+        </p>
+      </div>
+    </div>
+    <div class="experience-grid">
+      <div class="panel glass fade-up">
+        <div class="timeline">
+          <div class="item">
+            <time>06/2023 – 08/2023</time>
+            <h3>Engineering Department Intern — Tescas Seat Components, Tangier</h3>
+            <p>Participated in inventory counts, stock preparation, and reconciliation processes. Gained foundational SAP exposure for data entry and tracking, and developed understanding of industrial workflows and operational standards.</p>
+          </div>
+          <div class="item">
+            <time>Portfolio Project</time>
+            <h3>Inventory Optimization &amp; Stock Analysis (Excel)</h3>
+            <p>Developing analytical models to monitor stock performance, identify slow-moving and high-demand items, and support better inventory decisions through structured analysis.</p>
+          </div>
+          <div class="item">
+            <time>Portfolio Project</time>
+            <h3>AI-Powered Incident Triage Workflow (n8n)</h3>
+            <p>Exploring workflow automation using AI to classify and prioritize operational issues, with the goal of reducing manual effort and improving consistency in response processes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel glass fade-up">
+        <div class="timeline">
+          <div class="item">
+            <time>2021 – 2024</time>
+            <h3>Bachelor’s Degree in Business Management</h3>
+            <p>FSJES – El Jadida. Built a broad base in management, organization, and business fundamentals supporting analytical and operational career paths.</p>
+          </div>
+          <div class="item">
+            <time>In Progress</time>
+            <h3>Supply Chain Management Specialization — Coursera</h3>
+            <p>Focused on supply chain operations, logistics, and process optimization.</p>
+          </div>
+          <div class="item">
+            <time>Certifications &amp; Languages</time>
+            <h3>TEFL Certificate · Multilingual Communication</h3>
+            <p> Certified in Teaching English as a Foreign Language, issued February 2026.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="qualifications">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div>
+        <h2>Strengths</h2>
+        <p>
+          Core capabilities that define the current profile and support future growth in data-driven operational roles.
+        </p>
+      </div>
+    </div>
+    <div class="qual-grid">
+      <div class="qual-card glass fade-up">
+        <small>Technical Skills</small>
+        <strong>Excel, Power BI, SQL</strong>
+        <p>Developing capability in data handling, reporting, and operational analysis with a practical, applied approach.</p>
+      </div>
+      <div class="qual-card glass fade-up">
+        <small>Operations Focus</small>
+        <strong>Inventory &amp; Supply Chain Understanding</strong>
+        <p>Exposure to inventory control, logistics flow, SAP-based tracking, and industrial process environments.</p>
+      </div>
+      <div class="qual-card glass fade-up">
+        <small>Work Style</small>
+        <strong>Autonomous, Adaptable, Reliable</strong>
+        <p>Quick learner with strong motivation, problem-solving orientation, teamwork, rigor, and continuous improvement mindset.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section id="languages">
+<div class="container">
+<div class="section-head fade-up">
+<div>
+<h2>Languages</h2>
+<p>Multilingual communication presented as a real professional advantage for international and cross-functional environments.</p>
+</div>
+</div>
+<div class="panel glass fade-up">
+<div class="lang-grid">
+<div class="lang-card">
+<div class="lang-top">
+<div class="lang-name"><img class="flag" src="https://flagcdn.com/w40/ma.png" alt=""> Arabic</div>
+<div class="lang-level">Native</div>
+</div>
+<div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+<p class="lang-note">Native fluency with full confidence in professional and everyday communication.</p>
+</div>
+<div class="lang-card">
+<div class="lang-top">
+<div class="lang-name"><img class="flag" src="https://flagcdn.com/w40/gb.png" alt=""> English</div>
+<div class="lang-level">Advanced</div>
+</div>
+<div class="lang-bar"><div class="lang-fill" style="width:88%"></div></div>
+<p class="lang-note">Strong written and spoken communication for study, professional interaction, and international contexts.</p>
+</div>
+<div class="lang-card">
+<div class="lang-top">
+<div class="lang-name"><img class="flag" src="https://flagcdn.com/w40/fr.png" alt=""> French</div>
+<div class="lang-level">Intermediate</div>
+</div>
+<div class="lang-bar"><div class="lang-fill" style="width:68%"></div></div>
+<p class="lang-note">Comfortable with common communication and growing professional usage.</p>
+</div>
+<div class="lang-card">
+<div class="lang-top">
+<div class="lang-name"><img class="flag" src="https://flagcdn.com/w40/cn.png" alt=""> Chinese</div>
+<div class="lang-level">Beginner</div>
+</div>
+<div class="lang-bar"><div class="lang-fill" style="width:38%"></div></div>
+<p class="lang-note">Foundational level with active interest in expanding multilingual capability.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="documents">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div>
+        <h2>CV &amp; Motivation Letter</h2>
+        <p>
+          Embedded previews with popup viewing for a smoother recruiter experience and fast access to core application materials.
+        </p>
+      </div>
+    </div>
+    <div class="docs-grid">
+      <article class="doc-card glass fade-up">
+        <small>Curriculum Vitae</small>
+        <h3>Ayman Skhairi — CV</h3>
+        <p>Professional summary, education, internship experience, certifications, and technical skills.</p>
+        <div class="preview">
+          <iframe src="Ayman Skhairi En pro(2).pdf#view=FitH"></iframe>
+          <div class="preview-badge">Preview Only</div>
+        </div>
+        <div class="doc-actions">
+          <button class="btn btn-primary open-modal" data-file="Ayman Skhairi En pro(2).pdf" data-title="Ayman Skhairi — CV">Open Full View</button>
+          <a class="btn btn-secondary" download href="Ayman Skhairi En pro(2).pdf">Download CV</a>
+        </div>
+      </article>
+      <article class="doc-card glass fade-up">
+        <small>Motivation Letter</small>
+        <h3>Ayman Skhairi — Motivation Letter</h3>
+        <p>Formal statement of motivation focused on data analysis, supply chain optimization, and intelligent automation.</p>
+        <div class="preview">
+          <iframe src="Letter of motivation Ayman.pdf#view=FitH"></iframe>
+          <div class="preview-badge">Preview Only</div>
+        </div>
+        <div class="doc-actions">
+          <button class="btn btn-primary open-modal" data-file="Letter of motivation Ayman.pdf" data-title="Ayman Skhairi — Motivation Letter">Open Full View</button>
+          <a class="btn btn-secondary" download href="Letter of motivation Ayman.pdf">Download Letter</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact-grid">
+    <div class="contact-panel glass fade-up">
+      <h2>A structured profile for <span class="gradient">data, operations, and supply chain opportunities</span>.</h2>
+      <p>
+        This portfolio is designed to present a credible early-career profile through real experience, focused project development, and clear supporting documents.
+      </p>
+      <div class="cta-row" style="margin-bottom:0;">
+        <a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=aymanskhairi084@gmail.com" target="_blank">Contact via Email</a>
+<a class="btn btn-secondary" href="https://www.linkedin.com/in/ayman-skhairi-785254289/" target="_blank">LinkedIn Profile</a>
+        <a class="btn btn-secondary" href="#documents">Review Documents</a>
+      </div>
+    </div>
+    <div class="contact-side glass fade-up">
+      <h3 style="font-family:Georgia,'Times New Roman',serif;font-size:1.9rem;margin-bottom:12px;">Direct Contact</h3>
+      <p>Available for internships, entry-level roles, and growth opportunities in operations, analytics, and supply chain environments.</p>
+      <div class="contact-list">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aymanskhairi084@gmail.com" target="_blank">aymanskhairi084@gmail.com</a>
+        <a href="tel:+212698566067">+212 698 566 067</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">Ayman Skhairi via LinkedIn</a>
+        <div>El Jadida, Morocco</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Ayman Skhairi — professional portfolio for analytics, operations, and supply chain opportunities.
+</footer>
+
+<div aria-hidden="true" class="modal" id="pdfModal">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3 id="modalTitle">Document Preview</h3>
+      <button aria-label="Close" class="modal-close" id="closeModal">×</button>
+    </div>
+    <iframe id="modalFrame" src=""></iframe>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('pdfModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalFrame = document.getElementById('modalFrame');
+  const closeModal = document.getElementById('closeModal');
+
+  document.querySelectorAll('.open-modal').forEach(button => {
+    button.addEventListener('click', () => {
+      modalTitle.textContent = button.dataset.title || 'Document Preview';
+      modalFrame.src = button.dataset.file + '#view=FitH';
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function shutModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    modalFrame.src = '';
+    document.body.style.overflow = '';
+  }
+
+  closeModal.addEventListener('click', shutModal);
+  modal.addEventListener('click', e => {
+    if (e.target === modal) shutModal();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) shutModal();
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, {threshold: .12});
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
